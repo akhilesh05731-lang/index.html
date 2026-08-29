@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anshu | Ganpati Invitation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia, "Noto Serif Devanagari", serif;
+    background:#fff7e8;
+    color:#5a2500;
+    overflow-x:hidden;
+}
+
+/* ---------- Opening ---------- */
+
+.opening{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:linear-gradient(145deg,#8e1b00,#d94b00,#ff9d21);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    transition:1s ease;
+}
+
+.opening.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.opening-content{
+    padding:25px;
+    animation:zoomIn 1.5s ease;
+}
+
+.om{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.opening h1{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.opening p{
+    font-size:19px;
+    margin-bottom:30px;
+}
+
+.open-btn{
+    border:0;
+    padding:14px 30px;
+    border-radius:30px;
+    background:#fff4d0;
+    color:#9a2700;
+    font-size:17px;
+    cursor:pointer;
+    box-shadow:0 5px 20px #0005;
+}
+
+@keyframes zoomIn{
+    from{opacity:0;transform:scale(.7)}
+    to{opacity:1;transform:scale(1)}
+}
+
+/* ---------- Main ---------- */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:35px 20px;
+    position:relative;
+    background:
+      radial-gradient(circle at top,#ffd98a 0%,transparent 35%),
+      linear-gradient(#fff4d4,#fffaf0);
+}
+
+.hero-content{
+    max-width:700px;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-8px)}
+}
+
+.top-text{
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+.hero h1{
+    font-size:clamp(42px,10vw,78px);
+    color:#c53800;
+    margin:12px 0;
+}
+
+.hero h2{
+    font-size:clamp(25px,6vw,42px);
+    color:#8d3600;
+}
+
+.ganpati{
+    width:min(75vw,350px);
+    height:350px;
+    object-fit:cover;
+    border-radius:50%;
+    margin:25px auto;
+    display:block;
+    border:8px solid #f2b544;
+    box-shadow:0 10px 40px #a84c0035;
+}
+
+.scroll{
+    margin-top:25px;
+    font-size:14px;
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+    50%{transform:translateY(8px)}
+}
+
+/* ---------- Sections ---------- */
+
+section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.section-title{
+    font-size:34px;
+    color:#b93600;
+    margin-bottom:25px;
+}
+
+.card{
+    max-width:700px;
+    margin:auto;
+    padding:35px 25px;
+    background:#fff;
+    border-radius:25px;
+    box-shadow:0 10px 35px #7a300018;
+    border:1px solid #f0c978;
+}
+
+.card p{
+    font-size:20px;
+    line-height:1.9;
+}
+
+.highlight{
+    color:#c43a00;
+    font-weight:bold;
+}
+
+/* ---------- Gallery ---------- */
+
+.gallery{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:18px;
+    border:4px solid #f0c978;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* ---------- Details ---------- */
+
+.details{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    max-width:900px;
+    margin:auto;
+}
+
+.detail-box{
+    background:#fff;
+    border-radius:20px;
+    padding:25px 15px;
+    box-shadow:0 8px 25px #7a300018;
+    border-top:5px solid #d85b00;
+}
+
+.detail-box .icon{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.detail-box h3{
+    color:#a93200;
+    margin-bottom:8px;
+}
+
+.detail-box p{
+    line-height:1.6;
+}
+
+/* ---------- Ending ---------- */
+
+.end{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(160deg,#9d2300,#e65d00);
+    color:white;
+}
+
+.end h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.end p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+.name{
+    margin-top:25px;
+    font-size:30px;
+    color:#ffe2a0;
+}
+
+/* ---------- Floating flowers ---------- */
+
+.flower{
+    position:fixed;
+    top:-30px;
+    font-size:25px;
+    z-index:50;
+    pointer-events:none;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:.2;
+    }
+}
+
+/* ---------- Music ---------- */
+
+.music{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:52px;
+    height:52px;
+    border:0;
+    border-radius:50%;
+    background:#c43a00;
+    color:white;
+    font-size:21px;
+    z-index:100;
+    cursor:pointer;
+    box-shadow:0 5px 20px #0004;
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:650px){
+
+    .opening h1{
+        font-size:34px;
+    }
+
+    .ganpati{
+        width:270px;
+        height:270px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery img{
+        height:260px;
+    }
+
+    .details{
+        grid-template-columns:1fr;
+        max-width:350px;
+    }
+
+    section{
+        padding:65px 16px;
+    }
+
+    .card{
+        padding:28px 18px;
+    }
+
+    .card p{
+        font-size:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Opening Screen -->
+
+<div class="opening" id="opening">
+
+    <div class="opening-content">
+
+        <div class="om">ॐ</div>
+
+        <h1>श्री गणेशाय नमः</h1>
+
+        <p>आप सादर आमंत्रित हैं</p>
+
+        <button class="open-btn" onclick="openInvite()">
+            ✨ निमंत्रण खोलें ✨
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- Hero -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="top-text">
+            🪷 गणपति बप्पा मोरया 🪷
+        </div>
+
+        <h1>Ganpati Invitation</h1>
+
+        <h2>With Love & Devotion</h2>
+
+        <!-- अपनी Ganpati photo यहाँ लगाएँ -->
+        <img
+        class="ganpati"
+        src="images/ganpati.jpg"
+        alt="Ganpati">
+
+        <p>
+            विघ्नहर्ता मंगलकर्ता<br>
+            <b>श्री गणेश जी</b> के शुभ आगमन पर
+        </p>
+
+        <div class="scroll">
+            ↓ नीचे स्क्रॉल करें ↓
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- Invitation -->
+
+<section>
+
+    <h2 class="section-title">🌺 सादर निमंत्रण 🌺</h2>
+
+    <div class="card">
+
+        <p>
+
+        गणपति बप्पा के पावन आगमन की खुशी में
+        हम एक सुंदर एवं भक्तिमय उत्सव का आयोजन कर रहे हैं।
+
+        <br><br>
+
+        इस शुभ अवसर पर आपका और आपके परिवार का
+        आगमन हमारे लिए अत्यंत खुशी की बात होगी।
+
+        <br><br>
+
+        आइए साथ मिलकर बप्पा का स्वागत करें,
+        आरती करें और उनका आशीर्वाद प्राप्त करें। 🙏
+
+        <br><br>
+
+        <span class="highlight">
+        आपकी उपस्थिति इस उत्सव की शोभा बढ़ाएगी।
+        </span>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Event Details -->
+
+<section>
+
+    <h2 class="section-title">✨ उत्सव विवरण ✨</h2>
+
+    <div class="details">
+
+        <div class="detail-box">
+            <div class="icon">📅</div>
+            <h3>दिन</h3>
+            <p>आप यहाँ तारीख लिखें</p>
+        </div>
+
+        <div class="detail-box">
+            <div class="icon">⏰</div>
+            <h3>समय</h3>
+            <p>शाम 7:00 बजे</p>
+        </div>
+
+        <div class="detail-box">
+            <div class="icon">📍</div>
+            <h3>स्थान</h3>
+            <p>आप यहाँ स्थान लिखें</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Photos -->
+
+<section>
+
+    <h2 class="section-title">📸 हमारी यादें</h2>
+
+    <div class="gallery">
+
+        <img src="images/photo1.jpg" alt="Photo 1">
+
+        <img src="images/photo2.jpg" alt="Photo 2">
+
+        <img src="images/photo3.jpg" alt="Photo 3">
+
+        <img src="images/photo4.jpg" alt="Photo 4">
+
+    </div>
+
+</section>
+
+
+<!-- Final -->
+
+<section class="end">
+
+    <div>
+
+        <h2>🙏 गणपति बप्पा मोरया 🙏</h2>
+
+        <p>
+
+        आइए बप्पा के स्वागत में<br>
+        खुशियों और भक्ति के रंग में रंग जाएँ। 🌺
+
+        </p>
+
+        <div class="name">
+            — Anshu —
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Music Button -->
+
+<button class="music" onclick="toggleMusic()" id="musicBtn">
+    🎵
+</button>
+
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+
+/* Opening */
+
+function openInvite(){
+
+    document.getElementById("opening")
+    .classList.add("hide");
+
+    toggleMusic();
+
+}
+
+
+/* Music */
+
+let playing=false;
+
+function toggleMusic(){
+
+    const music=document.getElementById("music");
+    const btn=document.getElementById("musicBtn");
+
+    if(!playing){
+
+        music.play().catch(()=>{});
+
+        btn.innerHTML="🔊";
+        playing=true;
+
+    }else{
+
+        music.pause();
+
+        btn.innerHTML="🎵";
+        playing=false;
+
+    }
+
+}
+
+
+/* Falling flowers */
+
+function createFlower(){
+
+    const flowers=["🌸","🌺","🌼","🪷","✨"];
+
+    const f=document.createElement("div");
+
+    f.className="flower";
+
+    f.innerHTML=
+        flowers[Math.floor(Math.random()*flowers.length)];
+
+    f.style.left=Math.random()*100+"vw";
+
+    f.style.animationDuration=
+        (4+Math.random()*5)+"s";
+
+    f.style.fontSize=
+        (18+Math.random()*15)+"px";
+
+    document.body.appendChild(f);
+
+    setTimeout(()=>{
+        f.remove();
+    },9000);
+
+}
+
+setInterval(createFlower,900);
+
+
+/* Reveal animation */
+
+const observer=new IntersectionObserver(
+(entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.style.opacity="1";
+            entry.target.style.transform="translateY(0)";
+        }
+    });
+},
+{threshold:.15}
+);
+
+document.querySelectorAll("section").forEach(section=>{
+
+    section.style.opacity="0";
+    section.style.transform="translateY(35px)";
+    section.style.transition="1s ease";
+
+    observer.observe(section);
+
+});
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anshu | Ganpati Invitation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia, "Noto Serif Devanagari", serif;
+    background:#fff7e8;
+    color:#5a2500;
+    overflow-x:hidden;
+}
+
+/* ---------- Opening ---------- */
+
+.opening{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:linear-gradient(145deg,#8e1b00,#d94b00,#ff9d21);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    transition:1s ease;
+}
+
+.opening.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.opening-content{
+    padding:25px;
+    animation:zoomIn 1.5s ease;
+}
+
+.om{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.opening h1{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.opening p{
+    font-size:19px;
+    margin-bottom:30px;
+}
+
+.open-btn{
+    border:0;
+    padding:14px 30px;
+    border-radius:30px;
+    background:#fff4d0;
+    color:#9a2700;
+    font-size:17px;
+    cursor:pointer;
+    box-shadow:0 5px 20px #0005;
+}
+
+@keyframes zoomIn{
+    from{opacity:0;transform:scale(.7)}
+    to{opacity:1;transform:scale(1)}
+}
+
+/* ---------- Main ---------- */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:35px 20px;
+    position:relative;
+    background:
+      radial-gradient(circle at top,#ffd98a 0%,transparent 35%),
+      linear-gradient(#fff4d4,#fffaf0);
+}
+
+.hero-content{
+    max-width:700px;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-8px)}
+}
+
+.top-text{
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+.hero h1{
+    font-size:clamp(42px,10vw,78px);
+    color:#c53800;
+    margin:12px 0;
+}
+
+.hero h2{
+    font-size:clamp(25px,6vw,42px);
+    color:#8d3600;
+}
+
+.ganpati{
+    width:min(75vw,350px);
+    height:350px;
+    object-fit:cover;
+    border-radius:50%;
+    margin:25px auto;
+    display:block;
+    border:8px solid #f2b544;
+    box-shadow:0 10px 40px #a84c0035;
+}
+
+.scroll{
+    margin-top:25px;
+    font-size:14px;
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+    50%{transform:translateY(8px)}
+}
+
+/* ---------- Sections ---------- */
+
+section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.section-title{
+    font-size:34px;
+    color:#b93600;
+    margin-bottom:25px;
+}
+
+.card{
+    max-width:700px;
+    margin:auto;
+    padding:35px 25px;
+    background:#fff;
+    border-radius:25px;
+    box-shadow:0 10px 35px #7a300018;
+    border:1px solid #f0c978;
+}
+
+.card p{
+    font-size:20px;
+    line-height:1.9;
+}
+
+.highlight{
+    color:#c43a00;
+    font-weight:bold;
+}
+
+/* ---------- Gallery ---------- */
+
+.gallery{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:18px;
+    border:4px solid #f0c978;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* ---------- Details ---------- */
+
+.details{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    max-width:900px;
+    margin:auto;
+}
+
+.detail-box{
+    background:#fff;
+    border-radius:20px;
+    padding:25px 15px;
+    box-shadow:0 8px 25px #7a300018;
+    border-top:5px solid #d85b00;
+}
+
+.detail-box .icon{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.detail-box h3{
+    color:#a93200;
+    margin-bottom:8px;
+}
+
+.detail-box p{
+    line-height:1.6;
+}
+
+/* ---------- Ending ---------- */
+
+.end{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(160deg,#9d2300,#e65d00);
+    color:white;
+}
+
+.end h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.end p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+.name{
+    margin-top:25px;
+    font-size:30px;
+    color:#ffe2a0;
+}
+
+/* ---------- Floating flowers ---------- */
+
+.flower{
+    position:fixed;
+    top:-30px;
+    font-size:25px;
+    z-index:50;
+    pointer-events:none;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:.2;
+    }
+}
+
+/* ---------- Music ---------- */
+
+.music{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:52px;
+    height:52px;
+    border:0;
+    border-radius:50%;
+    background:#c43a00;
+    color:white;
+    font-size:21px;
+    z-index:100;
+    cursor:pointer;
+    box-shadow:0 5px 20px #0004;
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:650px){
+
+    .opening h1{
+        font-size:34px;
+    }
+
+    .ganpati{
+        width:270px;
+        height:270px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery img{
+        height:260px;
+    }
+
+    .details{
+        grid-template-columns:1fr;
+        max-width:350px;
+    }
+
+    section{
+        padding:65px 16px;
+    }
+
+    .card{
+        padding:28px 18px;
+    }
+
+    .card p{
+        font-size:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Opening Screen -->
+
+<div class="opening" id="opening">
+
+    <div class="opening-content">
+
+        <div class="om">ॐ</div>
+
+        <h1>श्री गणेशाय नमः</h1>
+
+        <p>आप सादर आमंत्रित हैं</p>
+
+        <button class="open-btn" onclick="openInvite()">
+            ✨ निमंत्रण खोलें ✨
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- Hero -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="top-text">
+            🪷 गणपति बप्पा मोरया 🪷
+        </div>
+
+        <h1>Ganpati Invitation</h1>
+
+        <h2>With Love & Devotion</h2>
+
+        <!-- अपनी Ganpati photo यहाँ लगाएँ -->
+        <img
+        class="ganpati"
+        src="images/ganpati.jpg"
+        alt="Ganpati">
+
+        <p>
+            विघ्नहर्ता मंगलकर्ता<br>
+            <b>श्री गणेश जी</b> के शुभ आगमन पर
+        </p>
+
+        <div class="scroll">
+            ↓ नीचे स्क्रॉल करें ↓
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- Invitation -->
+
+<section>
+
+    <h2 class="section-title">🌺 सादर निमंत्रण 🌺</h2>
+
+    <div class="card">
+
+        <p>
+
+        गणपति बप्पा के पावन आगमन की खुशी में
+        हम एक सुंदर एवं भक्तिमय उत्सव का आयोजन कर रहे हैं।
+
+        <br><br>
+
+        इस शुभ अवसर पर आपका और आपके परिवार का
+        आगमन हमारे लिए अत्यंत खुशी की बात होगी।
+
+        <br><br>
+
+        आइए साथ मिलकर बप्पा का स्वागत करें,
+        आरती करें और उनका आशीर्वाद प्राप्त करें। 🙏
+
+        <br><br>
+
+        <span class="highlight">
+        आपकी उपस्थिति इस उत्सव की शोभा बढ़ाएगी।
+        </span>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Event Details -->
+
+<section>
+
+    <h2 class="section-title">✨ उत्सव विवरण ✨</h2>
+
+    <div class="details">
+
+        <div class="detail-box">
+            <div class="icon">📅</div>
+            <h3>दिन</h3>
+            <p>आप यहाँ तारीख लिखें</p>
+        </div>
+
+        <div class="detail-box">
+            <div class="icon">⏰</div>
+            <h3>समय</h3>
+            <p>शाम 7:00 बजे</p>
+        </div>
+
+        <div class="detail-box">
+            <div class="icon">📍</div>
+            <h3>स्थान</h3>
+            <p>आप यहाँ स्थान लिखें</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Photos -->
+
+<section>
+
+    <h2 class="section-title">📸 हमारी यादें</h2>
+
+    <div class="gallery">
+
+        <img src="images/photo1.jpg" alt="Photo 1">
+
+        <img src="images/photo2.jpg" alt="Photo 2">
+
+        <img src="images/photo3.jpg" alt="Photo 3">
+
+        <img src="images/photo4.jpg" alt="Photo 4">
+
+    </div>
+
+</section>
+
+
+<!-- Final -->
+
+<section class="end">
+
+    <div>
+
+        <h2>🙏 गणपति बप्पा मोरया 🙏</h2>
+
+        <p>
+
+        आइए बप्पा के स्वागत में<br>
+        खुशियों और भक्ति के रंग में रंग जाएँ। 🌺
+
+        </p>
+
+        <div class="name">
+            — Anshu —
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Music Button -->
+
+<button class="music" onclick="toggleMusic()" id="musicBtn">
+    🎵
+</button>
+
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+
+/* Opening */
+
+function openInvite(){
+
+    document.getElementById("opening")
+    .classList.add("hide");
+
+    toggleMusic();
+
+}
+
+
+/* Music */
+
+let playing=false;
+
+function toggleMusic(){
+
+    const music=document.getElementById("music");
+    const btn=document.getElementById("musicBtn");
+
+    if(!playing){
+
+        music.play().catch(()=>{});
+
+        btn.innerHTML="🔊";
+        playing=true;
+
+    }else{
+
+        music.pause();
+
+        btn.innerHTML="🎵";
+        playing=false;
+
+    }
+
+}
+
+
+/* Falling flowers */
+
+function createFlower(){
+
+    const flowers=["🌸","🌺","🌼","🪷","✨"];
+
+    const f=document.createElement("div");
+
+    f.className="flower";
+
+    f.innerHTML=
+        flowers[Math.floor(Math.random()*flowers.length)];
+
+    f.style.left=Math.random()*100+"vw";
+
+    f.style.animationDuration=
+        (4+Math.random()*5)+"s";
+
+    f.style.fontSize=
+        (18+Math.random()*15)+"px";
+
+    document.body.appendChild(f);
+
+    setTimeout(()=>{
+        f.remove();
+    },9000);
+
+}
+
+setInterval(createFlower,900);
+
+
+/* Reveal animation */
+
+const observer=new IntersectionObserver(
+(entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.style.opacity="1";
+            entry.target.style.transform="translateY(0)";
+        }
+    });
+},
+{threshold:.15}
+);
+
+document.querySelectorAll("section").forEach(section=>{
+
+    section.style.opacity="0";
+    section.style.transform="translateY(35px)";
+    section.style.transition="1s ease";
+
+    observer.observe(section);
+
+});
+
+</script>
+
+</body>
+</html>
